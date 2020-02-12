@@ -52,7 +52,7 @@ variable "tier" {
 ###
 
 variable "workspace_enabled" {
-  description = "Boolean flag which describe whether to create the security center workspace or not"
+  description = "Boolean flag which describe whether to create the security center workspace or not."
   default     = false
 }
 
