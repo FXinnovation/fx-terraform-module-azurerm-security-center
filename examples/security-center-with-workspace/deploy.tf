@@ -4,30 +4,27 @@ resource "random_string" "this" {
   special = false
 }
 
-module "resource_group_demo" {
-  source = "git::https://scm.dazzlingwrench.fxinnovation.com/fxinnovation-public/terraform-module-azurerm-resource-group.git?ref=0.2.0"
+resource "azurerm_resource_group" "example" {
   name     = "tftest${random_string.this.result}"
-  location  = "canadacentral"
+  location = "francecentral"
 }
 
 module "workspace_test" {
   source = "git::https://scm.dazzlingwrench.fxinnovation.com/fxinnovation-public/terraform-module-azurerm-log-analytics-workspace.git?ref=0.2.0"
 
-  name                = "terraform-test-workspace-default"
-  location            = "canadacentral"
-  resource_group_name = module.resource_group_demo.name
-  sku
+  name                = "test${random_string.this.result}"
+  location            = "francecentral"
+  resource_group_name = azurerm_resource_group.example.name
+  sku                 = "PerGB2018"
 }
 
-module "security_center_with_workspace" {
+module "example" {
   source = "../.."
 
-  email = "test123@example.com"
-  phone  = "+1-214-267-0000"
-  tier     = "standard"
+  email             = "test123@example.com"
+  phone             = "+1-214-267-0000"
+  tier              = "standard"
   workspace_enabled = true
-
-  security_center_workspace = {
-    "/subscriptions/${var.subscription_id}"   = module.workspace_test.id
-  }  
+  scopes            = ["/subscriptions/${var.subscription_id}"]
+  workspace_ids     = ["${module.workspace_test.id}"]
 }
