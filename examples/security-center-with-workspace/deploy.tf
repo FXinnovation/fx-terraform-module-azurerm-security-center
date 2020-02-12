@@ -21,10 +21,11 @@ module "workspace_test" {
 module "example" {
   source = "../.."
 
-  email             = "test123@example.com"
-  phone             = "+1-214-267-0000"
-  tier              = "standard"
-  workspace_enabled = true
-  scopes            = ["/subscriptions/${var.subscription_id}"]
-  workspace_ids     = ["${module.workspace_test.id}"]
+  email                        = "test123@example.com"
+  phone                        = "+1-214-267-0000"
+  subscription_pricing_enabled = true
+  tier                         = "standard"
+  workspace_enabled            = true
+  scopes                       = ["/subscriptions/${var.subscription_id}"]
+  workspace_ids                = ["${module.workspace_test.id}"]
 }
