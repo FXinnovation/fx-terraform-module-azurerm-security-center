@@ -44,7 +44,7 @@ variable "subscription_pricing_enabled" {
 variable "tier" {
   description = "Manages the pricing tier for Azure security center in the current subscription. Possible values are `Free` and `Standard`. NOTE: Changing the pricing tier to Standard affects all resources in the subscription and could be quite costly. Deletion of this resource does not change or reset the pricing tier to Free. Source: https://www.terraform.io/docs/providers/azurerm/r/security_center_subscription_pricing.html"
   type        = string
-  default     = ""
+  default     = "Free"
 }
 
 ###

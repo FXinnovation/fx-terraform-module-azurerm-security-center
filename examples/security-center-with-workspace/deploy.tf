@@ -24,7 +24,7 @@ module "example" {
   email                        = "test123@example.com"
   phone                        = "+1-214-267-0000"
   subscription_pricing_enabled = true
-  tier                         = "standard"
+  tier                         = "Standard"
   workspace_enabled            = true
   scopes                       = ["/subscriptions/${var.subscription_id}"]
   workspace_ids                = ["${module.workspace_test.id}"]
