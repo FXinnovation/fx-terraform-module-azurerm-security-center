@@ -1,4 +1,4 @@
-# terraform-module-security-center
+# terraform-module-azurerm-security-center
 
 ## Usage
 See `examples` folders for usage of this module.
