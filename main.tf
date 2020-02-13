@@ -12,7 +12,7 @@ resource "azurerm_security_center_contact" "this" {
 }
 
 resource "azurerm_security_center_subscription_pricing" "this" {
-  count = var.subscription_pricing_enabled ? 1 : 0
+  count = var.enabled && var.subscription_pricing_enabled ? 1 : 0
 
   tier = var.tier
 }
@@ -22,7 +22,7 @@ resource "azurerm_security_center_subscription_pricing" "this" {
 ###
 
 resource "azurerm_security_center_workspace" "this_workspace" {
-  count = var.workspace_enabled ? length(var.scopes) : 0
+  count = var.enabled && var.workspace_enabled ? length(var.scopes) : 0
 
   scope        = var.tier != "Free" ? element(var.scopes, count.index) : ""
   workspace_id = var.tier != "Free" ? element(var.workspace_ids, count.index) : ""

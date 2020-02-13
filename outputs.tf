@@ -1,26 +1,26 @@
 ###
-# security center contact
+# Security center contact
 ###
 
-output "security_center_contact_ids" {
-  description = "The security center conatct IDs"
+output "security_center_contact_id" {
+  description = "The Security center conatct ID"
   value       = azurerm_security_center_contact.this.*.id
 }
 
 ###
-# security center subscription pricing
+# Security center subscription pricing
 ###
 
-output "security_center_pricing_ids" {
-  description = "The security center subscription pricing IDs "
+output "security_center_pricing_id" {
+  description = "The Security center subscription pricing ID "
   value       = azurerm_security_center_subscription_pricing.this.*.id
 }
 
 ###
-# security center workspace
+# Security center workspace
 ###
 
 output "security_center_workspace_ids" {
-  description = "IDs of security center workspaces"
+  description = "IDs of Security center workspaces"
   value       = azurerm_security_center_workspace.this_workspace.*.id
 }

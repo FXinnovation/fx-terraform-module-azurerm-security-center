@@ -1,4 +1,4 @@
-# Security center with  workspace example
+# Security center with free tier subscription example
 ## Usage
 ```
 terraform init
@@ -10,10 +10,7 @@ terraform destroy
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Providers
 
-| Name | Version |
-|------|---------|
-| azurerm | ~>1.41.0 |
-| random | n/a |
+No provider.
 
 ## Inputs
 
@@ -30,6 +27,5 @@ terraform destroy
 |------|-------------|
 | security\_center\_contact\_id | n/a |
 | security\_center\_pricing\_id | n/a |
-| security\_center\_workspace\_ids | n/a |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->

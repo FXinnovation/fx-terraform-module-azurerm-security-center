@@ -7,17 +7,17 @@ variable "enabled" {
 }
 
 ###
-# security center contact
+# Security center contact
 ###
 
 variable "email" {
-  description = "the email of the security center contact."
+  description = "the email of the Security center contact."
   type        = string
   default     = ""
 }
 
 variable "phone" {
-  description = "the phone number  of the security center contact. Example: `1-xxx-xxx-xxxx`"
+  description = "the phone number  of the Security center contact. Example: `1-xxx-xxx-xxxx`"
   type        = string
   default     = ""
 }
@@ -33,7 +33,7 @@ variable "alerts_to_admins" {
 }
 
 ###
-# security center subscription pricing
+# Security center subscription pricing
 ###
 
 variable "subscription_pricing_enabled" {
@@ -48,7 +48,7 @@ variable "tier" {
 }
 
 ###
-# security center workspace
+# Security center workspace
 ###
 
 variable "workspace_enabled" {
