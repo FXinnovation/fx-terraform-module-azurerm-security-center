@@ -1,4 +1,4 @@
-# security center with no workspace Example
+# Security center with no workspace example
 ## Usage
 ```
 terraform init
