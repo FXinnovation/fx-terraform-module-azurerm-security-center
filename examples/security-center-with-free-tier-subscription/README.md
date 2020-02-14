@@ -27,5 +27,6 @@ No provider.
 |------|-------------|
 | security\_center\_contact\_id | n/a |
 | security\_center\_pricing\_id | n/a |
+| security\_center\_workspace\_ids | n/a |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->

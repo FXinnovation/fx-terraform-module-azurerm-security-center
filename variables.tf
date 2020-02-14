@@ -11,13 +11,13 @@ variable "enabled" {
 ###
 
 variable "email" {
-  description = "the email of the Security center contact."
+  description = "The email address of the Security center contact."
   type        = string
   default     = ""
 }
 
 variable "phone" {
-  description = "the phone number  of the Security center contact. Example: `1-xxx-xxx-xxxx`"
+  description = "The phone number  of the Security center contact. Example: `1-xxx-xxx-xxxx`"
   type        = string
   default     = ""
 }

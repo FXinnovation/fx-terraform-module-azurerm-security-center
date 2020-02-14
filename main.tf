@@ -1,5 +1,5 @@
 ###
-# security center contact
+# Security center contact
 ###
 
 resource "azurerm_security_center_contact" "this" {
@@ -11,6 +11,10 @@ resource "azurerm_security_center_contact" "this" {
   alerts_to_admins    = var.alerts_to_admins
 }
 
+###
+# Security center subcription pricing
+###
+
 resource "azurerm_security_center_subscription_pricing" "this" {
   count = var.enabled && var.subscription_pricing_enabled ? 1 : 0
 
@@ -18,7 +22,7 @@ resource "azurerm_security_center_subscription_pricing" "this" {
 }
 
 ###
-# security center workspace
+# Security center workspace
 ###
 
 resource "azurerm_security_center_workspace" "this_workspace" {
