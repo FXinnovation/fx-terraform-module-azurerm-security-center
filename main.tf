@@ -26,7 +26,7 @@ resource "azurerm_security_center_subscription_pricing" "this" {
 ###
 
 resource "azurerm_security_center_workspace" "this_workspace" {
-  count = var.enabled && var.workspace_enabled ? length(var.scopes) : 0
+  count = var.enabled && var.workspace_enabled && var.tier != "Free" ? length(var.scopes) : 0
 
   scope        = var.tier != "Free" ? element(var.scopes, count.index) : ""
   workspace_id = var.tier != "Free" ? element(var.workspace_ids, count.index) : ""
