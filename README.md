@@ -4,16 +4,23 @@
 See `examples` folders for usage of this module.
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+## Requirements
+
+| Name | Version |
+|------|---------|
+| terraform | >= 0.12 |
+| azurerm | >= 2.0.0 |
+
 ## Providers
 
 | Name | Version |
 |------|---------|
-| azurerm | >= 1.41.0 |
+| azurerm | >= 2.0.0 |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:-----:|
+|------|-------------|------|---------|:--------:|
 | alert\_notifications | Boolean flag which describes whether to send security alerts notifications to the security contact. | `bool` | `true` | no |
 | alerts\_to\_admins | Boolean flag which describes  whether to send security alerts notifications to subscription admins. | `bool` | `true` | no |
 | email | The email address of the Security center contact. | `string` | `""` | no |
