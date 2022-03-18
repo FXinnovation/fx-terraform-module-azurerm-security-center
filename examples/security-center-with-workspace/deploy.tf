@@ -10,7 +10,7 @@ resource "azurerm_resource_group" "example" {
 }
 
 module "workspace_test" {
-  source = "git::https://scm.dazzlingwrench.fxinnovation.com/fxinnovation-public/terraform-module-azurerm-log-analytics-workspace.git?ref=0.2.0"
+  source = "git::https://github.com/FXinnovation/fx-terraform-module-azurerm-log-analytics-workspace.git?ref=0.2.0"
 
   name                = "test${random_string.this.result}"
   location            = "francecentral"
